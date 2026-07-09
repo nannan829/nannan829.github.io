@@ -33,7 +33,6 @@ function createPostcardElement(data, gallery = false) {
   card.style.setProperty('--rotate', `${rotate}deg`);
   card.innerHTML = `
     <div class="postcard-img-container">
-      <div class="postcard-placeholder">明信片图片</div>
       <img src="${data.image}" alt="儿童祝福明信片 ${data.number}" loading="${gallery ? 'lazy' : 'eager'}" onerror="this.style.display='none'" />
     </div>
     <div class="postcard-meta">
