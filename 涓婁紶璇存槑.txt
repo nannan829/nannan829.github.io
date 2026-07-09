@@ -1,0 +1,22 @@
+使用方法：
+1. 解压本文件夹。
+2. 不要上传 zip 本身。
+3. 把 index.html、css 文件夹、js 文件夹、images 文件夹一起上传到 GitHub 仓库根目录。
+4. 如果 GitHub 提示覆盖 index.html，确认覆盖即可。
+5. Pages 仍保持 main / root。
+
+文件结构：
+index.html：网站主结构
+css/style.css：全站样式
+js/script.js：明信片动画与数据
+images/：首页图、明信片背景图、所有明信片图片
+
+以后修改：
+- 改首页文字：index.html
+- 改颜色/排版/背景：css/style.css
+- 改明信片图片编号/动画速度：js/script.js
+- 替换图片：images 文件夹
+
+
+本版 v2 已修复：明信片标题框严格居中、移除图片失败时的文字提示、底部操作栏与明信片分离。
+上传 GitHub 时必须同时覆盖 index.html、css 文件夹、js 文件夹；只覆盖 index.html 不会生效。
