@@ -2,45 +2,126 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>儿童祝福明信片展示｜GitHub版</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>爱有回声 · 儿童祝福公益展</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <main class="page">
-    <header>
-      <div class="eyebrow">✉ 正在送达孩子们的祝福</div>
-      <h1>把祝福寄给你</h1>
-      <p class="subtitle">每一张明信片，都是一份温柔的陪伴。</p>
-      <p class="english">Postcards of Love</p>
-      <p class="tips" id="pathTip">GitHub版：请上传 index.html 和整个 images 文件夹。</p>
-    </header>
+  <main class="site-shell">
+    <!-- 01 首页：已经定稿的首页风格 -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-    <section class="mailbox-container" aria-label="祝福邮筒口">
-      <div class="mailbox-board">
-        <div class="slot"></div>
+      <header class="topbar">
+        <button class="menu-btn" aria-label="打开菜单">
+          <span></span><span></span>
+        </button>
+
+        <a class="brand" href="#home" aria-label="爱有回声首页">
+          <span class="brand-main">LOVE<span>echo</span></span>
+          <span class="brand-sub">POSTCARDS OF LOVE</span>
+        </a>
+
+        <nav class="nav-links" aria-label="首页导航">
+          <a href="#project">项目介绍</a>
+          <span class="divider"></span>
+          <a href="#postcards">祝福明信片</a>
+          <span class="divider"></span>
+          <a href="#videos">儿童视频</a>
+          <span class="divider"></span>
+          <a href="#write">写下祝福</a>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <p class="eyebrow">CHILDREN'S BLESSINGS · PUBLIC WELFARE EXHIBITION</p>
+        <h1><span class="hero-title-strong">LOVE</span><span class="hero-title-script">echo</span></h1>
+        <p class="hero-slogan">让孩子的祝福，被温柔看见</p>
+        <a class="outline-btn" href="#postcards">进入祝福展厅</a>
       </div>
-      <p class="mailbox-text">Blessings are on the way...</p>
+
+      <div class="quick-panel" aria-label="网页核心内容入口">
+        <a class="quick-item" href="#postcards">
+          <span class="quick-icon">✉</span>
+          <span><b>明信片</b><small>孩子写给孩子的温柔来信</small></span>
+        </a>
+        <a class="quick-item" href="#videos">
+          <span class="quick-icon">▶</span>
+          <span><b>祝福视频</b><small>这里预留后续视频位置</small></span>
+        </a>
+        <a class="quick-item" href="#project">
+          <span class="quick-icon">♡</span>
+          <span><b>公益闭环</b><small>给予、回应与爱的回声</small></span>
+        </a>
+        <a class="quick-search" href="#write">写下祝福</a>
+      </div>
     </section>
 
-    <section class="stage" id="stage" aria-label="明信片动画展示区"></section>
+    <!-- 02 项目介绍：后续可继续精修 -->
+    <section class="section intro" id="project">
+      <p class="section-kicker">ABOUT THE PROJECT</p>
+      <h2>把画、声音与祝福，变成可以抵达的陪伴。</h2>
+      <p>育英学校的小朋友把画作与祝福寄给儿童医院的小朋友，医院孩子通过回应、感谢和互动形成爱的闭环。这里后续可以继续补充项目背景、参与机构、公益流程与成果介绍。</p>
+    </section>
 
-    <footer>
-      <p class="footer-text">我们把祝福送出去，也在回应中收获爱。</p>
-      <div class="btn-group">
-        <button class="btn btn-primary" id="btnViewAll">查看全部祝福</button>
-        <button class="btn" onclick="alert('这里可以后续连接留言表单或问卷星链接。')">写下你的祝福</button>
+    <!-- 03 明信片展示：合并你已经做好的邮筒吐出明信片动态效果 -->
+    <section class="postcard-section" id="postcards">
+      <div class="postcard-soft-mask" aria-hidden="true"></div>
+      <div class="postcard-content">
+        <div class="postcard-heading">
+          <p class="section-kicker">POSTCARDS OF LOVE</p>
+          <h2>把祝福寄给你</h2>
+          <p>每一张明信片，都是一份温柔的陪伴。孩子们的画作与文字会从这里被送出，像一封封正在抵达的来信。</p>
+        </div>
+
+        <div class="mailbox-container" aria-label="祝福邮筒口">
+          <div class="mailbox-board"><div class="slot"></div></div>
+          <p class="mailbox-text">Blessings are on the way...</p>
+        </div>
+
+        <div class="stage" id="stage" aria-label="明信片动画展示区"></div>
+
+        <div class="postcard-actions">
+          <p>我们把祝福送出去，也在回应中收获爱。</p>
+          <div class="postcard-btns">
+            <button class="soft-button" id="btnViewAll" type="button">查看全部祝福</button>
+            <a class="soft-button soft-button-light" href="#write">写下你的祝福</a>
+          </div>
+        </div>
       </div>
-    </footer>
+    </section>
+
+    <!-- 04 视频区：预留位置，后续继续改 -->
+    <section class="section video-section" id="videos">
+      <p class="section-kicker">VIDEOS</p>
+      <h2>儿童祝福视频预留区</h2>
+      <p>这里后续可以放儿童祝福视频、医院回应视频、团队公益纪实等内容。把视频放进 videos 文件夹后，再在代码中替换路径即可。</p>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-box">VIDEO 01</div><h3>祝福视频一</h3><p>预留儿童祝福视频。</p></article>
+        <article class="video-card"><div class="video-box">VIDEO 02</div><h3>祝福视频二</h3><p>预留医院回应或互动视频。</p></article>
+        <article class="video-card"><div class="video-box">VIDEO 03</div><h3>公益纪实</h3><p>预留项目纪实或赛事展示片。</p></article>
+      </div>
+    </section>
+
+    <!-- 05 写下祝福：后续可接表单 -->
+    <section class="section write" id="write">
+      <p class="section-kicker">WRITE A BLESSING</p>
+      <h2>写下你想对 TA 说的话</h2>
+      <p>后续这里可以连接表单、留言板或问卷星链接，让更多人把温暖写进这场公益回声里。</p>
+      <a class="soft-btn" href="#home">回到首页</a>
+    </section>
   </main>
 
+  <!-- 全部明信片弹窗 -->
   <section class="modal" id="modal" aria-label="全部祝福明信片">
     <div class="modal-header">
       <h2>全部祝福明信片</h2>
-      <button class="close-btn" id="btnClose" aria-label="关闭">×</button>
+      <button class="close-btn" id="btnClose" type="button" aria-label="关闭">×</button>
     </div>
     <div class="gallery-grid" id="galleryGrid"></div>
   </section>
+
   <script src="js/script.js"></script>
 </body>
 </html>
