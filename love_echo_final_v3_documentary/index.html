@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>爱有回声 · 儿童祝福公益展</title>
+  <!-- v2: postcard strict fixed 2026-07-09 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="site-shell">
+    <!-- 01 首页：已经定稿的首页风格 -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <button class="menu-btn" aria-label="打开菜单">
+          <span></span><span></span>
+        </button>
+
+        <a class="brand" href="#home" aria-label="爱有回声首页">
+          <span class="brand-main">LOVE<span>echo</span></span>
+          <span class="brand-sub">POSTCARDS OF LOVE</span>
+        </a>
+
+        <nav class="nav-links" aria-label="首页导航">
+          <a href="#project">项目介绍</a>
+          <span class="divider"></span>
+          <a href="#postcards">祝福明信片</a>
+          <span class="divider"></span>
+          <a href="#videos">儿童视频</a>
+          <span class="divider"></span>
+          <a href="#write">写下祝福</a>
+        </nav>
+      </header>
+
+      <div class="hero-copy">
+        <p class="eyebrow">CHILDREN'S BLESSINGS · PUBLIC WELFARE EXHIBITION</p>
+        <h1><span class="hero-title-strong">LOVE</span><span class="hero-title-script">echo</span></h1>
+        <p class="hero-slogan">让孩子的祝福，被温柔看见</p>
+        <a class="outline-btn" href="#postcards">进入祝福展厅</a>
+      </div>
+
+      <div class="quick-panel" aria-label="网页核心内容入口">
+        <a class="quick-item" href="#postcards">
+          <span class="quick-icon">✉</span>
+          <span><b>明信片</b><small>孩子写给孩子的温柔来信</small></span>
+        </a>
+        <a class="quick-item" href="#videos">
+          <span class="quick-icon">▶</span>
+          <span><b>祝福视频</b><small>这里预留后续视频位置</small></span>
+        </a>
+        <a class="quick-item" href="#project">
+          <span class="quick-icon">♡</span>
+          <span><b>公益闭环</b><small>给予、回应与爱的回声</small></span>
+        </a>
+        <a class="quick-search" href="#write">写下祝福</a>
+      </div>
+    </section>
+
+    <!-- 02 项目介绍：后续可继续精修 -->
+    <section class="section intro" id="project">
+      <p class="section-kicker">ABOUT THE PROJECT</p>
+      <h2>把画、声音与祝福，变成可以抵达的陪伴。</h2>
+      <p>育英学校的小朋友把画作与祝福寄给儿童医院的小朋友，医院孩子通过回应、感谢和互动形成爱的闭环。这里后续可以继续补充项目背景、参与机构、公益流程与成果介绍。</p>
+    </section>
+
+    <!-- 03 明信片展示：合并你已经做好的邮筒吐出明信片动态效果 -->
+    <section class="postcard-section" id="postcards">
+      <div class="postcard-soft-mask" aria-hidden="true"></div>
+      <div class="postcard-content">
+        <div class="postcard-heading">
+          <p class="section-kicker">POSTCARDS OF LOVE</p>
+          <h2>把祝福寄给你</h2>
+          <p>每一张明信片，都是一份温柔的陪伴。孩子们的画作与文字会从这里被送出，像一封封正在抵达的来信。</p>
+        </div>
+
+        <div class="mailbox-container" aria-label="祝福邮筒口">
+          <div class="mailbox-board"><div class="slot"></div></div>
+          <p class="mailbox-text">Blessings are on the way...</p>
+        </div>
+
+        <div class="stage" id="stage" aria-label="明信片动画展示区"></div>
+
+        <div class="postcard-actions">
+          <p>我们把祝福送出去，也在回应中收获爱。</p>
+          <div class="postcard-btns">
+            <button class="soft-button" id="btnViewAll" type="button">查看全部祝福</button>
+            <a class="soft-button soft-button-light" href="#write">写下你的祝福</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 公益纪实：横向漂浮的图片与视频，保持留白与克制 -->
+    <section class="documentary-section" id="videos" aria-label="公益纪实影像">
+      <div class="media-marquee media-marquee-top" aria-label="上方纪实影像带">
+        <div class="media-track" id="mediaTrackTop"></div>
+      </div>
+
+      <div class="documentary-center">
+        <p class="documentary-kicker">LOVE ECHO ARCHIVE</p>
+        <h2>
+          <span>Collecting</span>
+          <em>gentle moments</em>
+        </h2>
+        <button class="documentary-button" id="openFirstMedia" type="button">爱有回声 · 纪实影像</button>
+      </div>
+
+      <div class="media-marquee media-marquee-bottom" aria-label="下方纪实影像带">
+        <div class="media-track" id="mediaTrackBottom"></div>
+      </div>
+    </section>
+
+    <!-- 05 写下祝福：后续可接表单 -->
+    <section class="section write" id="write">
+      <p class="section-kicker">WRITE A BLESSING</p>
+      <h2>写下你想对 TA 说的话</h2>
+      <p>后续这里可以连接表单、留言板或问卷星链接，让更多人把温暖写进这场公益回声里。</p>
+      <a class="soft-btn" href="#home">回到首页</a>
+    </section>
+  </main>
+
+  <!-- 全部明信片弹窗 -->
+  <section class="modal" id="modal" aria-label="全部祝福明信片">
+    <div class="modal-header">
+      <h2>全部祝福明信片</h2>
+      <button class="close-btn" id="btnClose" type="button" aria-label="关闭">×</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+
+  <!-- 纪实图片 / 视频查看弹窗 -->
+  <section class="media-modal" id="mediaModal" aria-label="纪实影像查看器" aria-hidden="true">
+    <div class="media-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+      <button class="media-modal-close" id="mediaModalClose" type="button" aria-label="关闭纪实影像">×</button>
+      <div class="media-modal-body" id="mediaModalBody"></div>
+      <div class="media-modal-caption">
+        <p class="media-modal-type" id="mediaModalType">LOVE ECHO ARCHIVE</p>
+        <h2 id="mediaModalTitle">公益纪实</h2>
+        <p id="mediaModalText"></p>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
