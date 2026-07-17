@@ -59,11 +59,65 @@
       </div>
     </section>
 
-    <!-- 02 项目介绍：后续可继续精修 -->
-    <section class="section intro" id="project">
-      <p class="section-kicker">ABOUT THE PROJECT</p>
-      <h2>把画、声音与祝福，变成可以抵达的陪伴。</h2>
-      <p>育英学校的小朋友把画作与祝福寄给儿童医院的小朋友，医院孩子通过回应、感谢和互动形成爱的闭环。这里后续可以继续补充项目背景、参与机构、公益流程与成果介绍。</p>
+    <!-- 02 公益闭环：四板块悬停展开交互 -->
+    <section class="loop-section" id="project" aria-label="公益闭环四板块">
+      <header class="loop-intro">
+        <div class="loop-intro-inner">
+          <p class="loop-eyebrow">ABOUT THE PROJECT</p>
+          <h2>让每一次善意抵达，<br>也让每一份回应被看见。</h2>
+          <p>从儿童创作、机构协作到医院送达与回应回传，这里呈现“爱有回声”的项目背景、参与机构、公益流程与项目成果。鼠标移到任一板块时，仅展开对应图片，其余区域保持与网站一致的暖米白底色。</p>
+        </div>
+      </header>
+
+      <div class="loop-accordion">
+        <button class="loop-chapter active" data-loop-id="background" type="button">
+          <div class="loop-summary"><span>项目背景</span></div>
+          <div class="loop-hero">
+            <div class="loop-copy">
+              <span class="loop-index">01 · Project Background</span>
+              <h3>项目背景</h3>
+              <p>把儿童的画作、声音与祝福送到医院，让同龄人的温柔表达成为真实可抵达的陪伴。</p>
+              <span class="loop-button">查看内容 ↗</span>
+            </div>
+          </div>
+        </button>
+
+        <button class="loop-chapter" data-loop-id="institutions" type="button">
+          <div class="loop-summary"><span>参与机构</span></div>
+          <div class="loop-hero">
+            <div class="loop-copy">
+              <span class="loop-index">02 · Organizations</span>
+              <h3>参与机构</h3>
+              <p>学校、医院、学生团队与公益伙伴共同参与，在各自场景中完成创作、送达与回应。</p>
+              <span class="loop-button">查看内容 ↗</span>
+            </div>
+          </div>
+        </button>
+
+        <button class="loop-chapter" data-loop-id="process" type="button">
+          <div class="loop-summary"><span>公益流程</span></div>
+          <div class="loop-hero">
+            <div class="loop-copy">
+              <span class="loop-index">03 · Workflow</span>
+              <h3>公益流程</h3>
+              <p>从儿童创作、内容整理与二维码制作，到医院展示、扫码观看和回应回传，形成完整路径。</p>
+              <span class="loop-button">查看内容 ↗</span>
+            </div>
+          </div>
+        </button>
+
+        <button class="loop-chapter" data-loop-id="results" type="button">
+          <div class="loop-summary"><span>项目成果</span></div>
+          <div class="loop-hero">
+            <div class="loop-copy">
+              <span class="loop-index">04 · Outcomes</span>
+              <h3>项目成果</h3>
+              <p>记录画作、影像、明信片与真实回应，让公益成果不仅被统计，也被看见和感受。</p>
+              <span class="loop-button">查看内容 ↗</span>
+            </div>
+          </div>
+        </button>
+      </div>
     </section>
 
     <!-- 03 明信片展示：合并你已经做好的邮筒吐出明信片动态效果 -->
@@ -93,32 +147,124 @@
       </div>
     </section>
 
-    <!-- 04 公益纪实：横向漂浮的图片与视频，保持留白与克制 -->
-    <section class="documentary-section" id="videos" aria-label="公益纪实影像">
-      <div class="media-marquee media-marquee-top" aria-label="上方纪实影像带">
-        <div class="media-track" id="mediaTrackTop"></div>
-      </div>
-
-      <div class="documentary-center">
-        <p class="documentary-kicker">LOVE ECHO ARCHIVE</p>
-        <h2>
-          <span>Collecting</span>
-          <em>gentle moments</em>
-        </h2>
-        <button class="documentary-button" id="openFirstMedia" type="button">爱有回声 · 纪实影像</button>
-      </div>
-
-      <div class="media-marquee media-marquee-bottom" aria-label="下方纪实影像带">
-        <div class="media-track" id="mediaTrackBottom"></div>
+    <!-- 04 视频区：预留位置，后续继续改 -->
+    <section class="section video-section" id="videos">
+      <p class="section-kicker">VIDEOS</p>
+      <h2>儿童祝福视频预留区</h2>
+      <p>这里后续可以放儿童祝福视频、医院回应视频、团队公益纪实等内容。把视频放进 videos 文件夹后，再在代码中替换路径即可。</p>
+      <div class="video-grid">
+        <article class="video-card"><div class="video-box">VIDEO 01</div><h3>祝福视频一</h3><p>预留儿童祝福视频。</p></article>
+        <article class="video-card"><div class="video-box">VIDEO 02</div><h3>祝福视频二</h3><p>预留医院回应或互动视频。</p></article>
+        <article class="video-card"><div class="video-box">VIDEO 03</div><h3>公益纪实</h3><p>预留项目纪实或赛事展示片。</p></article>
       </div>
     </section>
 
-    <!-- 05 写下祝福：后续可接表单 -->
-    <section class="section write" id="write">
-      <p class="section-kicker">WRITE A BLESSING</p>
-      <h2>写下你想对 TA 说的话</h2>
-      <p>后续这里可以连接表单、留言板或问卷星链接，让更多人把温暖写进这场公益回声里。</p>
-      <a class="soft-btn" href="#home">回到首页</a>
+    <!-- 05 最后一屏：写下祝福、站点导航、机构 Logo 预留和返回顶部 -->
+    <section class="final-screen" id="write" aria-label="写下祝福与网站收尾">
+      <div class="final-top">
+        <div class="final-subscribe-col">
+          <h2 class="final-subscribe-title final-serif-italic">write a blessing</h2>
+          <div class="final-subscribe-desc">
+            将你的祝福、想说的话，或一个轻轻的问候留在这里。<br>
+            我们会把它变成可以被看见、被听见、被送达的温柔回声。
+          </div>
+          <div class="final-form-row">
+            <input class="final-line-input" id="blessingName" type="text" placeholder="你的名字" aria-label="你的名字" />
+            <input class="final-line-input" id="blessingContact" type="text" placeholder="邮箱 / 联系方式" aria-label="邮箱或联系方式" />
+            <button class="final-send-btn final-serif-italic" id="finalSend" type="button">Send</button>
+          </div>
+          <label class="final-agreement">
+            <input class="final-check" id="blessingAgreement" type="checkbox" />
+            <span>我已阅读并同意页面内容展示授权与隐私说明，所提交的祝福内容可用于本项目的公益展示与回声计划。<a href="#">查看说明</a></span>
+          </label>
+        </div>
+
+        <div class="final-link-group">
+          <div class="final-link-list final-link-list-top">
+            <a href="#write">联系我们</a>
+            <a href="#project">项目介绍</a>
+            <a href="#postcards">祝福展厅</a>
+            <a href="#project">公益闭环</a>
+          </div>
+          <div class="final-info-group final-info-group-spaced">
+            <h3>项目联络</h3>
+            <div class="final-info-list">
+              <div>湖南 · 长沙</div>
+              <a href="mailto:echooflove@project.com">echooflove@project.com</a>
+              <div>合作咨询：+86 000 0000 0000</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="final-link-group">
+          <div class="final-link-list final-link-list-top">
+            <a href="#project">参与机构</a>
+            <a href="#postcards">明信片页面</a>
+            <a href="#videos">纪实影像</a>
+            <a href="#write">写下祝福</a>
+          </div>
+          <div class="final-info-group final-info-group-spaced">
+            <h3>项目支持</h3>
+            <div class="final-info-list">
+              <div>学校儿童创作</div>
+              <div>医院患儿回应</div>
+              <div>学生团队执行</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="final-social-col">
+          <a class="final-serif-italic" href="#">WeChat</a>
+          <a class="final-serif-italic" href="#">Xiaohongshu</a>
+          <a class="final-serif-italic" href="#">Instagram</a>
+        </div>
+      </div>
+
+      <div class="final-divider"></div>
+
+      <div class="final-bottom">
+        <div class="final-brand-wrap">
+          <div class="final-brand" aria-label="LOVE Echo">
+            <span>LOVE</span>
+            <span class="final-brand-script">Echo</span>
+          </div>
+          <div class="final-small-nav">
+            <a href="#">Legal Notice</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Project Credits</a>
+            <a href="#">Volunteer Team</a>
+          </div>
+        </div>
+
+        <div class="final-partners" aria-label="合作机构 Logo 预留区">
+          <div class="final-logo-box" aria-label="机构 Logo 预留位 1"></div>
+          <div class="final-logo-box" aria-label="机构 Logo 预留位 2"></div>
+          <div class="final-logo-box" aria-label="机构 Logo 预留位 3"></div>
+          <div class="final-logo-box" aria-label="机构 Logo 预留位 4"></div>
+        </div>
+      </div>
+
+      <div class="final-cta-wrap">
+        <div class="final-cta-bar">
+          <a class="final-cta-item" href="#write">
+            <span class="final-cta-icon">✉</span>
+            <span><small>Blessing</small><b>写下你的祝福</b></span>
+          </a>
+          <a class="final-cta-item" href="#postcards">
+            <span class="final-cta-icon">▧</span>
+            <span><small>Postcards</small><b>查看儿童明信片</b></span>
+          </a>
+          <a class="final-cta-item" href="#videos">
+            <span class="final-cta-icon">▶</span>
+            <span><small>Videos</small><b>进入祝福视频区</b></span>
+          </a>
+          <a class="final-cta-item" href="#project">
+            <span class="final-cta-icon">♡</span>
+            <span><small>Loop</small><b>回到公益闭环</b></span>
+          </a>
+          <button class="final-back-top" id="finalBackToTop" type="button">返回顶部</button>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -129,20 +275,6 @@
       <button class="close-btn" id="btnClose" type="button" aria-label="关闭">×</button>
     </div>
     <div class="gallery-grid" id="galleryGrid"></div>
-  </section>
-
-
-  <!-- 纪实图片 / 视频查看弹窗 -->
-  <section class="media-modal" id="mediaModal" aria-label="纪实影像查看器" aria-hidden="true">
-    <div class="media-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
-      <button class="media-modal-close" id="mediaModalClose" type="button" aria-label="关闭纪实影像">×</button>
-      <div class="media-modal-body" id="mediaModalBody"></div>
-      <div class="media-modal-caption">
-        <p class="media-modal-type" id="mediaModalType">LOVE ECHO ARCHIVE</p>
-        <h2 id="mediaModalTitle">公益纪实</h2>
-        <p id="mediaModalText"></p>
-      </div>
-    </div>
   </section>
 
   <script src="js/script.js"></script>

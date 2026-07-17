@@ -1,22 +1,9 @@
-爱有回声官网 V3：首页 + 明信片 + 公益纪实
+爱有回声完整官网 V5（已加入最后一屏）
 
-本版本已经在 V2 严格修复版基础上继续合并：
-1. 首页保持不变；
-2. 明信片动画、居中标题、底部操作栏保持不变；
-3. 原“儿童祝福视频预留区”已替换为简洁的公益纪实影像区；
-4. 取消单独的“纪实展示”大标题；
-5. 上下两排图片/视频会缓慢横向漂浮，鼠标悬停会暂停；
-6. 点击任意图片或视频，可在弹窗中查看；
-7. 已放入两个本地视频示例，方便直接测试。
+上传 GitHub 时：
+1. 不要上传 zip 本身；
+2. 解压后，把 index.html、css、js、images 四项一起覆盖到仓库根目录；
+3. 点击 Commit changes；
+4. 等待 GitHub Pages 更新后，用 Ctrl+F5 强制刷新。
 
-GitHub 更新方式：
-- 先解压本压缩包；
-- 将 index.html、css、js、images、videos 一起上传并覆盖仓库中的同名内容；
-- 不要只覆盖 index.html，因为此次修改同时涉及 css/style.css 和 js/script.js；
-- 提交 Commit changes 后等待 1—3 分钟，再按 Ctrl + F5 强制刷新。
-
-后续替换纪实素材：
-- 图片放入 images 文件夹；
-- 视频放入 videos 文件夹；
-- 打开 js/script.js，搜索 documentaryMedia；
-- 修改 type、src、poster、title、text 即可。
+最后一屏右下角已预留 4 个机构 Logo 位置，后续可继续替换。
