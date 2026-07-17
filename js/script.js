@@ -94,3 +94,188 @@ if (btnViewAll && btnClose && modal) {
 }
 
 window.addEventListener('DOMContentLoaded', startLoop);
+
+// ===== 公益纪实漂浮影像区 =====
+// 后续替换方法：
+// 1. 图片放入 images 文件夹，type 写 "image"，src 写图片路径。
+// 2. 视频放入 videos 文件夹，type 写 "video"，src 写视频路径，并为 poster 指定封面图。
+const documentaryMedia = [
+  {
+    type: "video",
+    src: "videos/documentary-01.mp4",
+    poster: "images/hero-children.jpg",
+    title: "孩子们的笑脸",
+    text: "用影像保存孩子之间最真实、最轻盈的一次相遇。"
+  },
+  {
+    type: "image",
+    src: "images/3.jpg",
+    title: "画里的祝福",
+    text: "一张画、一句话，也可以成为温柔抵达的方式。"
+  },
+  {
+    type: "image",
+    src: "images/7.jpg",
+    title: "童心来信",
+    text: "把孩子们亲手完成的作品，留在公益项目的纪实档案中。"
+  },
+  {
+    type: "image",
+    src: "images/11.jpg",
+    title: "正在送达",
+    text: "每一份祝福都在路上，也在等待一声回应。"
+  },
+  {
+    type: "image",
+    src: "images/15.jpg",
+    title: "祝福展厅",
+    text: "记录画作被看见、被阅读、被珍惜的过程。"
+  },
+  {
+    type: "image",
+    src: "images/19.jpg",
+    title: "爱的回声",
+    text: "给予并不是终点，回应让这份爱形成完整的闭环。"
+  },
+  {
+    type: "video",
+    src: "videos/documentary-02.mp4",
+    poster: "images/1.jpg",
+    title: "一封祝福的旅程",
+    text: "这是视频位置示例，后续可替换为儿童祝福或项目纪实视频。"
+  },
+  {
+    type: "image",
+    src: "images/23.jpg",
+    title: "被保存的瞬间",
+    text: "那些细小的笑容、画面和回应，构成项目最珍贵的部分。"
+  },
+  {
+    type: "image",
+    src: "images/27.jpg",
+    title: "一起完成",
+    text: "学校、医院、志愿者和孩子，共同完成一次爱的传递。"
+  },
+  {
+    type: "image",
+    src: "images/31.jpg",
+    title: "温柔陪伴",
+    text: "通过持续的记录，让每一份陪伴都不被轻易遗忘。"
+  },
+  {
+    type: "image",
+    src: "images/35.jpg",
+    title: "孩子写给孩子",
+    text: "最简单的祝福，往往拥有最真诚的力量。"
+  },
+  {
+    type: "image",
+    src: "images/39.jpg",
+    title: "继续发生",
+    text: "让下一张画、下一段视频和下一次回应继续汇入这里。"
+  }
+];
+
+const mediaTrackTop = document.getElementById('mediaTrackTop');
+const mediaTrackBottom = document.getElementById('mediaTrackBottom');
+const mediaModal = document.getElementById('mediaModal');
+const mediaModalClose = document.getElementById('mediaModalClose');
+const mediaModalBody = document.getElementById('mediaModalBody');
+const mediaModalTitle = document.getElementById('mediaModalTitle');
+const mediaModalText = document.getElementById('mediaModalText');
+const mediaModalType = document.getElementById('mediaModalType');
+const openFirstMedia = document.getElementById('openFirstMedia');
+
+function createMediaCard(item, index) {
+  const card = document.createElement('button');
+  card.type = 'button';
+  card.className = 'media-card';
+  card.setAttribute('aria-label', `查看${item.type === 'video' ? '视频' : '图片'}：${item.title}`);
+  card.dataset.mediaIndex = String(index);
+
+  const image = document.createElement('img');
+  image.src = item.poster || item.src;
+  image.alt = item.title;
+  image.loading = 'lazy';
+  card.appendChild(image);
+
+  if (item.type === 'video') {
+    const play = document.createElement('span');
+    play.className = 'media-card-play';
+    play.setAttribute('aria-hidden', 'true');
+    card.appendChild(play);
+  }
+
+  card.addEventListener('click', () => openDocumentaryMedia(index));
+  return card;
+}
+
+function fillMediaTrack(track, indexedItems) {
+  if (!track) return;
+  track.innerHTML = '';
+  // 复制两遍，保证横向漂浮可以无缝循环。
+  [...indexedItems, ...indexedItems].forEach(({ item, index }) => {
+    track.appendChild(createMediaCard(item, index));
+  });
+}
+
+function buildDocumentarySection() {
+  const indexed = documentaryMedia.map((item, index) => ({ item, index }));
+  const midpoint = Math.ceil(indexed.length / 2);
+  fillMediaTrack(mediaTrackTop, indexed.slice(0, midpoint));
+  fillMediaTrack(mediaTrackBottom, indexed.slice(midpoint));
+}
+
+function openDocumentaryMedia(index) {
+  if (!mediaModal || !mediaModalBody) return;
+  const item = documentaryMedia[index];
+  if (!item) return;
+
+  mediaModalBody.innerHTML = '';
+  if (item.type === 'video') {
+    const video = document.createElement('video');
+    video.controls = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.poster = item.poster || '';
+    const source = document.createElement('source');
+    source.src = item.src;
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    mediaModalBody.appendChild(video);
+  } else {
+    const image = document.createElement('img');
+    image.src = item.src;
+    image.alt = item.title;
+    mediaModalBody.appendChild(image);
+  }
+
+  mediaModalTitle.textContent = item.title;
+  mediaModalText.textContent = item.text;
+  mediaModalType.textContent = item.type === 'video' ? 'DOCUMENTARY VIDEO' : 'DOCUMENTARY IMAGE';
+  mediaModal.classList.add('active');
+  mediaModal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDocumentaryMedia() {
+  if (!mediaModal || !mediaModalBody) return;
+  const playingVideo = mediaModalBody.querySelector('video');
+  if (playingVideo) playingVideo.pause();
+  mediaModal.classList.remove('active');
+  mediaModal.setAttribute('aria-hidden', 'true');
+  mediaModalBody.innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+if (mediaModalClose) mediaModalClose.addEventListener('click', closeDocumentaryMedia);
+if (mediaModal) {
+  mediaModal.addEventListener('click', (event) => {
+    if (event.target === mediaModal) closeDocumentaryMedia();
+  });
+}
+if (openFirstMedia) openFirstMedia.addEventListener('click', () => openDocumentaryMedia(0));
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && mediaModal?.classList.contains('active')) closeDocumentaryMedia();
+});
+window.addEventListener('DOMContentLoaded', buildDocumentarySection);

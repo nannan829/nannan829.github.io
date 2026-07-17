@@ -93,15 +93,23 @@
       </div>
     </section>
 
-    <!-- 04 视频区：预留位置，后续继续改 -->
-    <section class="section video-section" id="videos">
-      <p class="section-kicker">VIDEOS</p>
-      <h2>儿童祝福视频预留区</h2>
-      <p>这里后续可以放儿童祝福视频、医院回应视频、团队公益纪实等内容。把视频放进 videos 文件夹后，再在代码中替换路径即可。</p>
-      <div class="video-grid">
-        <article class="video-card"><div class="video-box">VIDEO 01</div><h3>祝福视频一</h3><p>预留儿童祝福视频。</p></article>
-        <article class="video-card"><div class="video-box">VIDEO 02</div><h3>祝福视频二</h3><p>预留医院回应或互动视频。</p></article>
-        <article class="video-card"><div class="video-box">VIDEO 03</div><h3>公益纪实</h3><p>预留项目纪实或赛事展示片。</p></article>
+    <!-- 04 公益纪实：横向漂浮的图片与视频，保持留白与克制 -->
+    <section class="documentary-section" id="videos" aria-label="公益纪实影像">
+      <div class="media-marquee media-marquee-top" aria-label="上方纪实影像带">
+        <div class="media-track" id="mediaTrackTop"></div>
+      </div>
+
+      <div class="documentary-center">
+        <p class="documentary-kicker">LOVE ECHO ARCHIVE</p>
+        <h2>
+          <span>Collecting</span>
+          <em>gentle moments</em>
+        </h2>
+        <button class="documentary-button" id="openFirstMedia" type="button">爱有回声 · 纪实影像</button>
+      </div>
+
+      <div class="media-marquee media-marquee-bottom" aria-label="下方纪实影像带">
+        <div class="media-track" id="mediaTrackBottom"></div>
       </div>
     </section>
 
@@ -121,6 +129,20 @@
       <button class="close-btn" id="btnClose" type="button" aria-label="关闭">×</button>
     </div>
     <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+
+  <!-- 纪实图片 / 视频查看弹窗 -->
+  <section class="media-modal" id="mediaModal" aria-label="纪实影像查看器" aria-hidden="true">
+    <div class="media-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle">
+      <button class="media-modal-close" id="mediaModalClose" type="button" aria-label="关闭纪实影像">×</button>
+      <div class="media-modal-body" id="mediaModalBody"></div>
+      <div class="media-modal-caption">
+        <p class="media-modal-type" id="mediaModalType">LOVE ECHO ARCHIVE</p>
+        <h2 id="mediaModalTitle">公益纪实</h2>
+        <p id="mediaModalText"></p>
+      </div>
+    </div>
   </section>
 
   <script src="js/script.js"></script>
